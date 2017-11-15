@@ -20,16 +20,10 @@ const config = isDevelopment ? require('./env') : {
 
 const twit = new Twit(config)
 
-const MAX_TWEETS = 4
+const MAX_TWEETS = 1
 
 const SCHEDULE = [
-  '0 14 7 * * *', // 8.15
-  '0 19 9 * * *', // 10.20
-  '0 3 11 * * *', // 12.04
-  '0 33 13 * * *', // 14.34
-  '0 56 15 * * *', // 16.57
-  '0 22 20 * * *', // 21.23
-  '0 19 22 * * *', // 23.20
+  '0 0 * * * *', // every hour
 ]
 
 winston.configure({
