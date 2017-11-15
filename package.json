@@ -1,0 +1,29 @@
+{
+  "name": "millennilols",
+  "version": "1.0.0",
+  "description": "Millennilols bot",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "per-env",
+    "start:development": "NODE_ENV=development node server",
+    "start:production": "node server",
+    "deploy": "now -e NODE_ENV=production -e CONSUMER_KEY=@millennilols-consumer-key -e CONSUMER_SECRET=@millennilols-consumer-secret -e ACCESS_TOKEN=@millennilols-access-token -e ACCESS_TOKEN_SECRET=@millennilols-access-token-secret && now alias set `pbpaste` millennilols && now scale millennilols.now.sh 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehedger/millennilols.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukehedger/millennilols/issues"
+  },
+  "homepage": "https://github.com/lukehedger/millennilols#readme",
+  "dependencies": {
+    "fs-extra": "^4.0.2",
+    "node-schedule": "^1.2.5",
+    "per-env": "^1.0.2",
+    "twit": "^2.2.9",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {}
+}
