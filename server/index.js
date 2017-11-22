@@ -23,7 +23,7 @@ const twit = new Twit(config)
 const MAX_TWEETS = 1
 
 const SCHEDULE = [
-  '0 0 * * * *', // every hour
+  '0 */3 * * * *', // every 3 hours
 ]
 
 winston.configure({
